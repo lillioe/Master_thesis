@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+data/
+*.fa
+*.fasta
+*.fna
+*.gz
+*.fai
+*.tsv
+*.csv
+*.parquet
+
+.env
+.venv/
