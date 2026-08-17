@@ -46,11 +46,7 @@ def build_genes_df(gff: pd.DataFrame) -> pd.DataFrame:
 
 def build_transcripts_df(gff: pd.DataFrame) -> pd.DataFrame:
     """
-    Build transcript table from GFF3.
-
-    In RefSeq/NCBI GFF3, transcript-like rows often have:
-        ID=rna-...
-        Parent=gene-...
+    Build transcript table from GFF3
     """
 
     transcript_types = {
@@ -95,11 +91,11 @@ def build_exons_df(
     transcripts_df: pd.DataFrame,
 ) -> pd.DataFrame:
     """
-    Build exon table and attach gene_id through transcript_id.
+    Build exon table and attach gene_id through transcript_id
 
     In GFF3, exon rows usually have:
         Parent=rna-...
-    Sometimes Parent can contain multiple transcript IDs separated by commas.
+    Sometimes Parent can contain multiple transcript IDs separated by commas
     """
 
     exons = gff[gff["type"] == "exon"].copy()
@@ -147,7 +143,7 @@ def build_exons_df(
 
 def filter_to_multi_exon(genes_df, transcripts_df, exons_df):
     """
-    Keep only transcripts with at least two exons, plus their genes and exons.
+    Keep only transcripts with at least two exons, plus their genes and exons
     """
     exon_counts = (
         exons_df

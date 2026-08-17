@@ -16,11 +16,8 @@ def write_candidate_tables(
     out_path,
 ) -> int:
     """
-    Build candidate table for all genes and write incrementally to disk.
-
-    Returns
-    -------
-    total_rows:
+    Build candidate table for all gene,
+    Returns total_rows:
         Number of candidate rows written.
     """
 
@@ -74,7 +71,7 @@ def write_candidate_tables(
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Build GT/AG candidate splice-site table from gene intervals."
+        description="Build GT/AG candidate splice-site table from gene intervals"
     )
 
     parser.add_argument("--fasta", required=True, help="Path to genome FASTA")

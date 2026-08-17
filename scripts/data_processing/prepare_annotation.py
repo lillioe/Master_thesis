@@ -12,7 +12,7 @@ from splice_paths.annotation import (
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Prepare genes, transcripts, and exons tables from RefSeq/NCBI GFF."
+        description="Prepare genes, transcripts, and exons tables from RefSeq/NCBI GFF"
     )
 
     parser.add_argument("--gff", required=True, help="Path to genomic.gff.gz")
